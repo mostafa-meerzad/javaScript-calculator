@@ -1,0 +1,33 @@
+@use "./variables";
+@use "./display";
+@use "./numpad";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-image: linear-gradient(
+    50deg,
+    variables.$very-dark-gray,
+    variables.$gray
+  );
+}
+
+.calculator {
+  box-shadow: 0 0 12px variables.$black;
+  background-color: variables.$black;
+  overflow: hidden;
+  width: 18rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+

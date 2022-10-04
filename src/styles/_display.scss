@@ -1,0 +1,23 @@
+@use "./variables";
+
+
+
+.display{
+ 
+    padding: 3rem 1rem .6rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size:3rem;
+    color: variables.$white;
+    font-weight: 100;
+    align-self: flex-end;
+    width: fit-content;
+   
+    overflow: hidden;
+   
+   
+}
+.small{
+       
+    font-size: 2rem;
+}
