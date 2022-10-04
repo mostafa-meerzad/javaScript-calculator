@@ -40,6 +40,14 @@ export const operations = (firstNum, secondNum, operator) => {
         return result;
       }
     }
+    case "%": {
+      let result = String(Number(firstNum) % Number(secondNum));
+      if (result.match(regex)) {
+        return makeRound(result);
+      } else {
+        return result;
+      }
+    }
     default:
       return;
   }
