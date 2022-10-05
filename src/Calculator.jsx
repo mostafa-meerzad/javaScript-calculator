@@ -24,11 +24,7 @@ const Calculator = () => {
         operator={operator}
         equals={"="}
         result={result}
-        className={""}
       />
-
-      <div className="waves" />
-
       <NumPad />
     </main>
   );

@@ -1,32 +1,19 @@
+const Display = ({ first, second, operator, result}) => {
 
-const Display = ({ first, second, operator, result }) => {
-
-  const display = document.getElementById('display')
-  console.log(display);
- 
   return (
-    <div
-      id="display"
-  className={first.length > 8 ? "display small": 'display'}
-
-    >
-      {first && operator && second
-        ? <div >
-            {first} {operator} {second}
-          </div>
-        : first && operator
-          ? <div >
+    <div id="display" className="display">
+      <div className="display__sect--small">
+        {operator
+          ? <div>
               {first} {operator}
             </div>
-          : first
-            ? <div >
-                {first}
-              </div>
-            : result
-              ? <div>
-                  {result}
-                </div>
-              : <div>0</div>}
+          : ""}
+      </div>
+      <div className="display__sect">
+        {first && operator && second
+          ? second
+          : first && operator ? first : first ? first : result ? result : "0"}
+      </div>
     </div>
   );
 };
