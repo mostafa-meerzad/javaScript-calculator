@@ -14,7 +14,6 @@ const NumberBtn = ({id, content, className}) => {
 
       } else if(operators.match(RegExp( id ))){
         dispatch(operator(content))
-        console.log("dispatch operator")
         
       } else if(id === "clear"){
         dispatch(setInitial())
