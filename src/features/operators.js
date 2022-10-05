@@ -11,7 +11,7 @@ export const operations = (firstNum, secondNum, operator) => {
         return makeRound(result);
       } else {
         if (result.length > 11) {
-          return String(Number(result).toPrecision());
+          return String(Number(result).toPrecision(5));
         }
         return result;
       }
@@ -22,7 +22,7 @@ export const operations = (firstNum, secondNum, operator) => {
         return makeRound(result);
       } else {
         if (result.length > 11) {
-          return String(Number(result).toPrecision());
+          return String(Number(result).toPrecision(5));
         }
         return result;
       }
@@ -33,7 +33,7 @@ export const operations = (firstNum, secondNum, operator) => {
         return makeRound(result);
       } else {
         if (result.length > 11) {
-          return String(Number(result).toPrecision());
+          return String(Number(result).toPrecision(5));
         }
         return result;
       }
@@ -44,7 +44,7 @@ export const operations = (firstNum, secondNum, operator) => {
         return makeRound(result);
       } else {
         if (result.length > 11) {
-          return String(Number(result).toPrecision());
+          return String(Number(result).toPrecision(5));
         }
         return result;
       }
@@ -55,7 +55,7 @@ export const operations = (firstNum, secondNum, operator) => {
         return makeRound(result);
       } else {
         if (result.length > 11) {
-          return String(Number(result).toPrecision());
+          return String(Number(result).toPrecision(5));
         }
         return result;
       }
