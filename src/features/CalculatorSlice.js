@@ -7,8 +7,9 @@ const initialState = {
   secondNum: "",
   secondNumSign: "",
   operator: "",
-  result: "",
-  error: false
+  result: ""
+  // ,
+  // error: false
 };
 
 export const calculatorSlice = createSlice({
@@ -20,29 +21,29 @@ export const calculatorSlice = createSlice({
         if (action.payload === "0") {
           if (state.secondNum.startsWith("0")) {
             if (state.secondNum.match(/\./)) {
-              state.secondNum += action.payload;
+              if(state.secondNum.length <= 10) state.secondNum += action.payload;
             } else {
-              state.error = true;
+              return;
             }
           } else {
-            state.secondNum += action.payload;
+            if(state.secondNum.length <= 10) state.secondNum += action.payload;
           }
         } else {
-          state.secondNum += action.payload;
+          if(state.secondNum.length <= 10) state.secondNum += action.payload;
         }
       } else {
         if (action.payload === "0") {
           if (state.firstNum.startsWith("0")) {
             if (state.firstNum.match(/\./)) {
-              state.firstNum += action.payload;
+              if(state.firstNum.length <= 10) state.firstNum += action.payload;
             } else {
-              state.error = true;
+              return;
             }
           } else {
-            state.firstNum += action.payload;
+            if(state.firstNum.length <= 10 ) state.firstNum += action.payload;
           }
         } else {
-          state.firstNum += action.payload;
+          if(state.firstNum.length <= 10 ) state.firstNum += action.payload;
         }
       }
     },
@@ -63,7 +64,8 @@ export const calculatorSlice = createSlice({
           state.secondNumSign = "";
           state.operator = "";
         } else {
-          console.log("first block else ");
+          // console.log("first block else ");
+          return
         }
       } else {
         if (state.firstNum && state.secondNum) {
@@ -102,7 +104,8 @@ export const calculatorSlice = createSlice({
               if (state.firstNum) {
                 state.operator = action.payload;
               } else {
-                console.log(" error ");
+                // console.log(" error ");
+                return
               }
             }
           }
@@ -113,7 +116,7 @@ export const calculatorSlice = createSlice({
       if (state.operator) {
         if (state.secondNum) {
           if (state.secondNum.match(/\./)) {
-            state.error = true;
+            return;
           } else {
             state.secondNum += action.payload;
           }
@@ -123,7 +126,7 @@ export const calculatorSlice = createSlice({
       } else {
         if (state.firstNum) {
           if (state.firstNum.match(/\./)) {
-            state.error = true;
+            return;
           } else {
             state.firstNum += action.payload;
           }
