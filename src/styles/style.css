@@ -1,20 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 .display {
-  padding: 3rem 1rem 0.6rem;
+  padding: 0.6rem 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
-  font-size: 3rem;
+  align-items: flex-end;
   color: #fff;
-  font-weight: 100;
   align-self: flex-end;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  overflow: hidden;
+  height: 8rem;
 }
-
-.small {
-  font-size: 2rem;
+.display__sect {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.display__sect--small {
+  font-size: 1rem;
+  color: #737373;
 }
 
 .numpad {

@@ -1,23 +1,24 @@
 @use "./variables";
 
+.display {
+  padding: 0.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: variables.$white;
+  align-self: flex-end;
+  height: 8rem;
+  &__sect {
+    font-size: 2.5rem;
+    font-weight: 300;
+
+    &--small {
+      font-size: 1rem;
+      color: variables.$dark-gray;
+    }
+  }
+
+}
 
 
-.display{
- 
-    padding: 3rem 1rem .6rem;
-    display: flex;
-    justify-content: flex-end;
-    font-size:3rem;
-    color: variables.$white;
-    font-weight: 100;
-    align-self: flex-end;
-    width: fit-content;
-   
-    overflow: hidden;
-   
-   
-}
-.small{
-       
-    font-size: 2rem;
-}
